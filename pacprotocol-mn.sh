@@ -48,8 +48,9 @@ echo "##########################################################################
 echo ""
 sleep 3
 set +
+sudo apt-get -y update
+sudo apt-get -y upgrade
 sudo apt-get -y install git python3 virtualenv
-sudo apt-get -y install unattended-upgrades
 sudo apt-get -y install ufw pwgen
 set -
 #cat /etc/apt/apt.conf.d/50unattended-upgrades | grep -v "Unattended-Upgrade::Automatic-Reboot \"false\"" > /etc/apt/apt.conf.d/50unattended-upgrades2 && mv /etc/apt/apt.conf.d/50unattended-upgrades2 /etc/apt/apt.conf.d/50unattended-upgrades
