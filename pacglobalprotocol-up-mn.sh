@@ -37,7 +37,8 @@ echo "#################################################"
 echo ""
 sleep 3
 set +
-sudo apt-get -y install unattended-upgrades
+apt-get -y install unattended-upgrades
+apt-get -y install git python3 virtualenv
 set -
 #cat /etc/apt/apt.conf.d/50unattended-upgrades | grep -v "Unattended-Upgrade::Automatic-Reboot \"false\"" > /etc/apt/apt.conf.d/50unattended-upgrades2 && mv /etc/apt/apt.conf.d/50unattended-upgrades2 /etc/apt/apt.conf.d/50unattended-upgrades
 #cat /etc/apt/apt.conf.d/50unattended-upgrades | grep -v "Unattended-Upgrade::Remove-Unused-Dependencies \"false\"" > /etc/apt/apt.conf.d/50unattended-upgrades2 && mv /etc/apt/apt.conf.d/50unattended-upgrades2 /etc/apt/apt.conf.d/50unattended-upgrades
@@ -77,7 +78,7 @@ cd ~
 cat /etc/crontab | grep -v "* * * * * root cd ~/sentinel && ./venv/bin/python bin/sentinel.py >/dev/null 2>&1" > /etc/crontab2 && mv /etc/crontab2 /etc/crontab
 rm -r -f ~/sentinel
 set +e
-apt-get -y install git python3 virtualenv
+#apt-get -y install git python3 virtualenv => done above!
 #apt-get -y install python python-virtualenv 
 #apt-get -y install virtualenv git
 #git clone https://github.com/PACGlobalOfficial/sentinel.git 
