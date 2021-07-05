@@ -37,6 +37,7 @@ echo "#################################################"
 echo ""
 sleep 3
 set +
+apt-get -y update
 apt-get -y install unattended-upgrades
 apt-get -y install git python3 virtualenv
 set -
