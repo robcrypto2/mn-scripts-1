@@ -105,7 +105,7 @@ if [ $cont = 'y' ] || [ $cont = 'yes' ] || [ $cont = 'Y' ] || [ $cont = 'Yes' ];
 		echo "###########################"
 		echo ""
 		sudo swapoff -a
-		sudo fallocate -l 3G /swapfile
+		sudo fallocate -l 100M /swapfile
 		sudo chmod 600 /swapfile
 		sudo mkswap /swapfile
 		sudo swapon /swapfile
